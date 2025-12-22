@@ -31,4 +31,13 @@ server.listen(PORT, function () {
     console.log(`The server is running succesfully on port: ${PORT}`);    
 });
 
-// git init -- qilib (.gitignore) folder ocamiz
+/*
+1) git init -- qilib (.gitignore) folder ocamiz
+2) node_modules
+3) git status
+4) git add .
+5) git status
+6) git commit -m "BRR: building express web server"
+
+*/ 
+ 
