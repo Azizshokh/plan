@@ -20,7 +20,7 @@ app.set("view engine", "ejs"); //BSSR Backenda Frontend qurish
 app.get("/hello", function(req, res){
     res.end(`<h1 style="background: yellow">Hello World by ALI!!!</h1>`);
     // res.end - response javob tugashi
-    // res.send - response jo'natish va automatik tigatish
+    // res.send - response jo'natish va automatik tugatish
 });
 
 app.get("/gift", function(req, res){
@@ -33,15 +33,5 @@ server.listen(PORT, function () {
     console.log(`The server is running succesfully on port: ${PORT}`);    
 });
 
-/*
-1) git init -- qilib (.gitignore) file ocamiz
-2) node_modules
-3) git status
-4) git add .
-5) git status
-6) git commit -m "BRR: building express web server"
-7) git log --oneline
-8) git branch
-*) (git add server.js; git commit -m "Fix server.js configuration"; git status)
-*/ 
+
  
