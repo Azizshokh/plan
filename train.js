@@ -1,4 +1,27 @@
 /*
+B-TASK: 
+
+Shunday function tuzing, u 1ta string parametrga ega bolsin,
+hamda osha stringda qatnashgan raqamlarni sonini
+bizga return qilsin. MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+*/
+
+function checkingString(string) {
+  let count = 0;
+
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] >= '0' && string[i] <= '9') {
+      count++;
+    }
+  }
+
+  console.log(`${string} da ${count} ta raqam bor`);
+  
+}
+checkingString("ad2a54y79wet0sfgb9");
+
+
+/*
 A-TASK: 
 
 Shunday 2 parametrli function tuzing, hamda birinchi parametrdagi 
