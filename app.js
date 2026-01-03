@@ -6,7 +6,7 @@ const app = express(); // expressning objecti app ga yuboriladi
 
 // MongoDB connect
 const db = require("./server").db();
-
+const mongodb = require("mongodb");
 
 
 // 1 Entry codes: Express ma'lumotiga bog'liq bo'lgan kodlar un;
@@ -58,6 +58,15 @@ app.post("/create-item", (req, res) => {
   });
 
   // res.json({ test: "success" });
+});
+
+app.post("/delete-item", (req, res) => {
+  const id = req.body.id;
+  // console.log(id); 
+  // res.end("done"); 
+  db.collection("plans").deleteOne({_id: new mongodb.ObjectId(id)}, function(err, data) {
+    res.json({state: "succes"});
+  });
 });
 
 app.get("/", function(req, res){

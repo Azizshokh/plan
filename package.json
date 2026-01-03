@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
+    "index": "nodemon index.js",
     "dev": "nodemon app.js",
     "train": "nodemon train.js",
     "zoom": "nodemon zoom.js",

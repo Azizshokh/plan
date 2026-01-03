@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha512-YK1Mz9UiZmhbFzXgMbl3bO49wZ78Xj3h8TtTBLFHEAEjUBxsEZdXd8Il5RWbhPOyB653bGQDNVGGny2mORZq4A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
+    <link rel="stylesheet" href="././main.css">
+    <title>Portfolio</title>
+</head>
+
+<body>    
+    <div class="frame">
+        <div class="main_frame">
+            <div class="left_frame">
+                <div class="left_1">
+                    <div class="left_1-img">
+                        <img src="img/Profile.svg" width="150px" height="150px" alt="">
+                    </div>
+                    <div class="left_1-title">
+                        <%=user.name%>
+                    </div>
+                    <div class="left_1-disc">
+                        <%=user.profession%>
+                    </div>
+                    <div class="left-icons">
+                        <a href="link_href">
+                            <div class="icon">
+                                <img src="btn-icon/Facebook.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="link_href">
+                            <div class="icon">
+                                <img src="btn-icon/Instagram.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="link_href">
+                            <div class="icon">
+                                <img src="btn-icon/Twitter.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="link_href">
+                            <div class="icon">
+                                <img src="btn-icon/Linkeding.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="link_href">
+                            <div class="icon">
+                                <img src="btn-icon/Youtube.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="link_href">
+                            <div class="icon">
+                                <img src="btn-icon/Dribbble.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_2">
+                    <div class="data-box-1">
+                        <p class="data-box-title">Age:</p>
+                        <p class="data-box-disc">
+                            <%=user.age%>
+                        </p>
+                    </div>
+                    <div class="data-box-1">
+                        <p class="data-box-title">Residence:</p>
+                        <p class="data-box-disc">
+                            <%=user.residence%>
+                        </p>
+                    </div>
+                    <div class="data-box-1">
+                        <p class="data-box-title">Freelance:</p>
+                        <p class="active">
+                            <%=user.freelance%>
+                        </p>
+                    </div>
+                    <div class="data-box-1">
+                        <p class="data-box-title">Address:</p>
+                        <p class="data-box-disc">
+                            <%=user.address%>
+                        </p>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_3">
+                    <h3 class="left_3-title">Languages</h3>
+                    <div class="lang-disc">
+                        <p class="lang-name">Uzbek</p>
+                        <p class="lang-percentage">100%</p>
+                    </div>
+                    <div class="percentage-box">
+                        <div class="percentage-100"></div>
+                    </div>
+                    <div class="lang-disc">
+                        <p class="lang-name">English</p>
+                        <p class="lang-percentage">80%</p>
+                    </div>
+                    <div class="percentage-box">
+                        <div class="percentage-80"></div>
+                    </div>
+                    <div class="lang-disc">
+                        <p class="lang-name">Korean</p>
+                        <p class="lang-percentage">60%</p>
+                    </div>
+                    <div class="percentage-box">
+                        <div class="percentage-60"></div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_4">
+                    <h3 class="left_3-title">Skills</h3>
+                    <div class="lang-disc">
+                        <p class="lang-name">Html</p>
+                        <p class="lang-percentage">90%</p>
+                    </div>
+                    <div class="percentage-box">
+                        <div class="percentage-90"></div>
+                    </div>
+                    <div class="lang-disc">
+                        <p class="lang-name">CSS</p>
+                        <p class="lang-percentage">85%</p>
+                    </div>
+                    <div class="percentage-box">
+                        <div class="percentage-80"></div>
+                    </div>
+                    <div class="lang-disc">
+                        <p class="lang-name">JS</p>
+                        <p class="lang-percentage">60%</p>
+                    </div>
+                    <div class="percentage-box">
+                        <div class="percentage-60"></div>
+                    </div>
+                    <div class="lang-disc">
+                        <p class="lang-name">PHP</p>
+                        <p class="lang-percentage">10%</p>
+                    </div>
+                    <div class="percentage-box">
+                        <div class="percentage-10"></div>
+                    </div>
+                    <div class="lang-disc">
+                        <p class="lang-name">WordPress</p>
+                        <p class="lang-percentage">60%</p>
+                    </div>
+                    <div class="percentage-box">
+                        <div class="percentage-60"></div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_5">
+                    <h3 class="left_3-title">Extra Skills</h3>
+                    <div class="ext-skill-data">
+                        <img src="btn-icon/skill-icons.png" alt="">
+                        <p class="ext-skill-disc">Bootstrap, Materialize</p>
+                    </div>
+                    <div class="ext-skill-data">
+                        <img src="btn-icon/skill-icons.png" alt="">
+                        <p class="ext-skill-disc">Styluz, Sass, Less</p>
+                    </div>
+                    <div class="ext-skill-data">
+                        <img src="btn-icon/skill-icons.png" alt="">
+                        <p class="ext-skill-disc">Gulp, Webpack, Grunt</p>
+                    </div>
+                    <div class="ext-skill-data">
+                        <img src="btn-icon/skill-icons.png" alt="">
+                        <p class="ext-skill-disc">GIT Knowledge</p>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="button">
+                    <a href="#" class="left_frame-btn">Download cv <img class="btn-img" src="btn-icon/btn.png"
+                            alt=""></a>
+                </div>
+            </div>
+
+
+            <div class="middle_frame">
+                <div class="pos-img">
+                <div class="img-1"><img src="pos-img/Ellipse15.svg" alt=""></div>
+                <div class="img-2"><img src="pos-img/Ellipse12.svg" alt=""></div>
+                <div class="img-3"><img src="pos-img/Rectangle51.svg" alt=""></div>
+                <div class="img-4"><img src="pos-img/Ellipse12.svg" alt=""></div>
+                <div class="img-5"><img src="pos-img/Rectangle52.svg" alt=""></div>
+                <div class="img-6"><img src="pos-img/Ellipse15.svg" alt=""></div>
+                <div class="img-7"><img src="pos-img/Polygon1.svg" alt=""></div>
+            </div>
+                <div class="middle_frame-content">
+                    <div class="author-disc">
+                        <h1 class="author-name">I'm Ali Jurakulov <span>Full-Stack</span> Developer</h1>
+                        <p class="author-inf">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quisquam voluptatibus qui.
+                            Excepturi, error. Repellendus accusantium harum ut veritatis quae sit alias ipsum possimus
+                            illo?
+                        </p>
+                        <div class="author-btn">
+                            <a href="#" class="author_btn-link">hire me <img src="btn-icon/btn2.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="author-photo">
+                        <img src="img/author-img.svg" alt="">
+                    </div>
+                </div>
+                <div class="services">
+                    <h2 class="services-title">My Services</h2>
+                    <p class="services-inf">Lorem ipsum dolore, ipsum dolore, ipsum dolore, ipsum dolore, modi veritatis
+                        unde animi in nostrum ducimus cupiditate illum
+                        adipisci! Illum, ipsum! Quia!
+                    </p>
+                </div>
+                <div class="services_boxes">
+                    <div class="services_box">
+                        <img src="box-img/coding.svg" alt="">
+                        <h3 class="services_box-title">Web Development</h3>
+                        <p class="services_box-disc">blog, e-commerce</p>
+                    </div>
+                    <div class="services_box">
+                        <img src="box-img/illustration.svg" alt="">
+                        <h3 class="services_box-title">UI/UX Design</h3>
+                        <p class="services_box-disc">Mobile app, website design</p>
+                    </div>
+                    <div class="services_box">
+                        <img src="box-img/Microphone.svg" alt="">
+                        <h3 class="services_box-title">Sound Design</h3>
+                        <p class="services_box-disc">Voice Over, Beat Making</p>
+                    </div>
+                    <div class="services_box">
+                        <img src="box-img/game-development.svg" alt="">
+                        <h3 class="services_box-title">Game Design</h3>
+                        <p class="services_box-disc">Character Design, Props & Objects</p>
+                    </div>
+                    <div class="services_box">
+                        <img src="box-img/Photographer.svg" alt="">
+                        <h3 class="services_box-title">Photography</h3>
+                        <p class="services_box-disc">portrait, product photography</p>
+                    </div>
+                    <div class="services_box">
+                        <h3 class="services_box-title">Advertising</h3>
+                        <p class="services_box-disc">Lorem ipsum quasi consequuntur est officiis nam perferendis
+                            repellendus quis libero animi, quod sit, et necessitatibus tempore?</p>
+                        <a href="#" class="order-btn">order now <img src="box-img/next.svg" alt=""></a>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="right_frame">
+                <div class="moon">
+                    <img src="btn-icon/Contrast.svg" alt="">
+                </div>
+                <div class="right_frame-icons">
+                    <a href="#" class="right_frame-links active"><img src="btn-icon/Home.svg" alt=""></a>
+                    <a href="#" class="right_frame-links"><img src="btn-icon/file-code.svg" alt=""></a>
+                    <a href="#" class="right_frame-links"><img src="btn-icon/cv.svg" alt=""></a>
+                    <a href="#" class="right_frame-links"><img src="btn-icon/Portfolio.svg" alt=""></a>
+                    <a href="#" class="right_frame-links"><img src="btn-icon/Blog.svg" alt=""></a>
+                    <a href="#" class="right_frame-links"><img src="btn-icon/Contact.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

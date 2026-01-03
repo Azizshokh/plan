@@ -8,7 +8,7 @@ function itemTemplate(item) {
                     <div>
                         <button data-id="${item._id}"
                             class="edit-me btn btn-secondary btn-sm mr-1">O'zgartirish</button>
-                        <button data-id="<${item._id}" class="delete-me btn btn-danger btn-sm">O'chirish</button>
+                        <button data-id="${item._id}" class="delete-me btn btn-danger btn-sm">O'chirish</button>
                     </div>
                 
             </li>`;
@@ -16,7 +16,7 @@ function itemTemplate(item) {
 
 let createField = document.getElementById("create-field");
 
-document.getElementById("create-form").addEventListener("submit", function (e) {
+document.getElementById("create-form").addEventListener("submit", (e) => {
     e.preventDefault();
 
     axios
@@ -24,11 +24,39 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
         .then(response => {
             document
             .getElementById("item-list")
-            .insertAdjacentHTML("beforeend", itemTemplate(respone.data))
+            .insertAdjacentHTML("beforeend", itemTemplate(response.data))
             createField.value = "";
             createField.focus();
+            toggleCleanAllButton();
         })
         .catch(err => {
             console.log("Iltimos qaytadan harakat qiling!");            
         });
+});
+
+document.addEventListener("click", function(e) {
+    console.log(e.target);
+
+    // Delete oper
+    if(e.target.classList.contains("delete-me")) {
+        // alert("Siz delete tugmasini bosdingiz");
+        if(confirm("Anniq o'chirmoqchimisiz???")) {
+            // alert("Yes deb javob berildi");
+            axios.post("/delete-item", {id: e.target.getAttribute("data-id")})
+            .then((response) => {
+                console.log(response.data);
+                e.target.parentElement.parentElement.remove();               
+            })
+            .catch((err) => {
+                console.log("Iltimos qaytadan harakat qiling!");
+            });
+        } /*else {
+            // alert("No deb javob berildi");
+        }*/
+    }
+
+    // Edit oper
+    if(e.target.classList.contains("edit-me")) {
+        alert("Siz edit tugmasini bosdingiz");
+    }         
 });

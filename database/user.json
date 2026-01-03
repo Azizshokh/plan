@@ -1,0 +1,12 @@
+{
+    "name": "ALI",
+    "profession": "Software Engineer",
+    "age": 27,
+    "residence": "South Korea",
+    "freelance": "Available",
+    "address": "South Korea",
+    "language": ["uzbek", "korean", "english"],
+    "skills": ["HTML", "Css", "NodeJS"],
+    "extra_skills": ["Bootsrap, Materialize", "Styling, Sass", "GIT Knowledge"],
+    "work-place": "IT Company"
+}
