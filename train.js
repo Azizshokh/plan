@@ -1,4 +1,53 @@
 /*
+D-TASK: 
+
+Shunday class tuzing tuzing nomi Shop,
+ va uni constructoriga 3 hil mahsulot pass bolsin, 
+ hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. 
+ Har bir method ishga tushgan vaqt ham log qilinsin. 
+ MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud!
+  shop.sotish('non', 3) & shop.qabul('cola', 4) & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
+*/
+
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+  }
+
+  getTime() {
+    const now = new Date();
+    return `${now.getHours()}:${now.getMinutes()}`;
+  }
+
+  qoldiq() {
+    return `Hozir ${this.getTime()}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`;
+  }
+
+  sotish(mahsulot, son) {
+    this[mahsulot] -= son;
+    console.log(`Hozir ${this.getTime()}da ${son}ta ${mahsulot} sotildi`);
+  }
+
+  qabul(mahsulot, son) {
+    this[mahsulot] += son;
+    console.log(`Hozir ${this.getTime()}da ${son}ta ${mahsulot} qabul qilindi`);
+  }
+}
+
+const shop = new Shop(4, 5, 2);
+
+console.log(shop.qoldiq());
+
+shop.sotish('non', 3);
+shop.qabul('cola', 4);
+
+console.log(shop.qoldiq());
+
+
+
+/*
 C-TASK: 
 
 Shunday function tuzing, u 2ta string parametr ega bolsin,

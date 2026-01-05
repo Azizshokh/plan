@@ -23,9 +23,10 @@ app.set("view engine", "ejs"); //BSSR Backenda Frontend qurish
 // 4 Routing codes: Routerlar un
 // serverga path qilish un:
 
-app.get("/hello", function (req, res) {
-  res.end(`<h1 style="background: yellow">Hello World by ALI!!!</h1>`);
-});
+// app.get("/hello", function (req, res) {
+//   res.end(`<h1 style="background: yellow">Hello World by ALI!!!</h1>`);
+// });
+
 // res.end - response javob tugashi
 // res.send - response jo'natish va automatik tugatish
 
@@ -68,6 +69,27 @@ app.post("/delete-item", (req, res) => {
     res.json({state: "succes"});
   });
 });
+
+app.post("/edit-item", (req, res) => {
+  const data = req.body;
+  console.log(data);
+  db.collection("plans").findOneAndUpdate(
+    { _id: new mongodb.ObjectId(data.id)}, 
+    { $set: {reja: data.new_input}},
+    function(err, data) {
+      res.json({ state: "succes"});
+    });
+  // res.end("done");  
+});
+
+app.post("/delete-all", (req, res) => {
+  if (req.body.delete_all) {
+    db.collection("plans").deleteMany(function () {
+      res.json({ state: "hamma rejalar o'chirildi"});
+    });
+  }
+})
+
 
 app.get("/", function(req, res){
   console.log("user entered /");  
